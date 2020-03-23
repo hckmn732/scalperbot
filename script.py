@@ -46,9 +46,7 @@ def notification():
         update = last_update(url)
         if update_id == update["update_id"]:
             if get_message_text(update).lower() == "/open_orders" :
-            
-            elif get_message_text(update).lower() == "play":
-                
+                send_message(get_chat_id(update), "Orders ready")
             else:
                 send_message(get_chat_id(update), "Sorry Not Understand what you inputted:( I love you")
             update_id += 1
@@ -120,8 +118,8 @@ def init_data():
     #df['MACD'] = df['EMAFAST'] - df['EMASLOW']
     #df['SIGNAL_LINE'] = df['MACD'].ewm(span=9).mean()
 
-t = threading.Thread(target = init_data,name="RSI")
-t.start()
+#t = threading.Thread(target = init_data,name="RSI")
+#t.start()
 
 t = threading.Thread(target = notification,name="Notifcation")
 t.start()
