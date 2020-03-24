@@ -123,4 +123,4 @@ def init_data():
 
 #t = threading.Thread(target = notification,name="Notifcation")
 #t.start()
-notification
+notification()
