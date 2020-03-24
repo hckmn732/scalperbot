@@ -121,5 +121,6 @@ def init_data():
 #t = threading.Thread(target = init_data,name="RSI")
 #t.start()
 
-t = threading.Thread(target = notification,name="Notifcation")
-t.start()
+#t = threading.Thread(target = notification,name="Notifcation")
+#t.start()
+notification
